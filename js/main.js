@@ -1,10 +1,16 @@
 function validateForm(){
 	/* Escribe tú código aquí */
-	var nombre= document.getElementById('name').value;
-	var apellido= document.getElementById('lastname').value;
-	var correo = document.getElementById('input-email').value;
-	var contrasena= document.getElementById('input-password').value;
-	var indice = document.getElementsByTagName('select')[0].selectedIndex;
+	
+	//var nombre= document.getElementById('name').value;
+	var nombre = $('#name').val();
+	//var apellido= document.getElementById('lastname').value;
+	var apellido = $('#lastname').val();
+	//var correo = document.getElementById('input-email').value;
+	var correo = $('#input-email').val();
+	//var contrasena= document.getElementById('input-password').value;
+	var contrasena = $('#input-password').val();
+	//var indice = document.getElementsByTagName('select')[0].selectedIndex;
+	var indice = $( ".form-group" ).eq(1).val();
 
 	//Todos los campos son obligatorios, excepto los dos últimos.
 	function camposRellenadosNombre(){
