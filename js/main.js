@@ -1,6 +1,6 @@
 function validateForm(){
 	/* Escribe tú código aquí */
-	
+
 	//var nombre= document.getElementById('name').value;
 	var nombre = $('#name').val();
 	//var apellido= document.getElementById('lastname').value;
@@ -9,8 +9,8 @@ function validateForm(){
 	var correo = $('#input-email').val();
 	//var contrasena= document.getElementById('input-password').value;
 	var contrasena = $('#input-password').val();
-	//var indice = document.getElementsByTagName('select')[0].selectedIndex;
-	var indice = $( ".form-group" ).eq(1).val();
+	
+	var indice = document.getElementsByTagName('select')[0].selectedIndex;
 
 	//Todos los campos son obligatorios, excepto los dos últimos.
 	function camposRellenadosNombre(){
@@ -80,14 +80,6 @@ function validateForm(){
 			return true;
 		}
 	}camposRellenadosBici();
-
-		/*if(contrasena==null || contrasena.length==0 || /^\s+$/.test(contrasena)){
-			alert("El campo contraseña no debe ir vacío.");
-			return false;
-		}
-		else{
-			return true;
-		}*/
 
  	//Los campos nombre y apellido sólo deben permitir caracteres de la A-Z
  	function validaSoloTextoNombre(nombre){
