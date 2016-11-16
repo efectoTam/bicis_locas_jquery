@@ -11,11 +11,10 @@ function validateForm(){
 	function camposRellenadosNombre(){
 		if(nombre==null || nombre.length==0 || /^\s+$/.test(nombre)){
 			var containerAlertaNombre = document.getElementsByClassName("name-container")[0];
-			//var contenedorErrorNombre = document.createElement("span");
 			$( ".name-container" ).append("<span id='idNombre'>Debe ingresar su nombre.</span>");
 			return false;
 		} else{
-			var spanNombre = $('#idNombre').hide();
+			$('#idNombre').hide();
 			return true;
 		}
 	}camposRellenadosNombre();
@@ -26,7 +25,7 @@ function validateForm(){
 			$( ".lastname-container").append("<span id='idApellido'>Debe ingresar su apellido.</span>");
 			return false;
 		} else{
-			var spanApellido = $('#idApellido').hide();
+			$('#idApellido').hide();
 			return true;
 		}
 	}camposRellenadosApellido();
@@ -37,7 +36,7 @@ function validateForm(){
 			$( ".email-container").append("<span id='idCorreo'>Verifique que su email tenga un formato válido.</span>");
 			return false;
 		} else{
-			var spanCorreo = $('#idCorreo').hide();
+			$('#idCorreo').hide();
 			return true;
 		}
 	}correoValido();
@@ -48,7 +47,7 @@ function validateForm(){
 			$( ".input-box:eq(4)").append("<span id='idBici'>Debe seleccionar al menos un tipo de bici.</span>");
 	  		return false;
 		} else{
-			var spanBici = $('#idBici').hide();
+			$('#idBici').hide();
 			return true;
 		}
 	}camposRellenadosBici();
@@ -118,7 +117,7 @@ function validateForm(){
 			$( ".input-box:eq(3)" ).append("<span id='idContrasena'>La contraseña debe tener al menos 6 caracteres.</span>");
 			return false;
     	} else{
-			var spanContrasena = $('#idContrasena').hide();
+			$('#idContrasena').hide();
     		return true;
     	}
 	}seisCaracteres(contrasena);
